@@ -1,0 +1,43 @@
+:root {
+  --font-main: system-ui, sans-serif;
+  --color-bg: #111;
+  --color-text: #fff;
+}
+body {
+  margin: 0;
+  font-family: var(--font-main);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.5;
+  padding: 1rem;
+}
+img { max-width: 100%; height: auto; display: block; }
+
+.nav-button a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-button a:hover { 
+    color: red;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    font-size: 24px;
+    font-weight: 300;
+}
+
+.page-links{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    font-size: 20px;
+}
+
+.nav-links{
+    display: flex;
+    padding-right: 2rem;
+    gap: 30px;
+}
