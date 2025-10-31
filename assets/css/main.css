@@ -5,6 +5,8 @@
   --color-bg-dark: #0D0D0D;
   --color-text-red: #993333;
   --color-text-white: #ced9df;
+  --color-text-white-50: #ced9df80;
+  --nav-pill-w: clamp(110px, 12rem, 380px);
 }
 
 body {
@@ -34,21 +36,41 @@ img { max-width: 100%; height: auto; display: block; }
     font-weight: 700;
 }
 
-
-
 nav {
     display: flex;
     justify-content: space-between;
     padding: 2.5rem;
     font-size: 28px;
 }
-
+.nav-dropdown {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    inline-size: var(--nav-pill-w);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;    
+    border:1px solid var(--color-text-white);
+    border-radius: 40px;
+    gap: 1rem;
+}
 .page-links{
+    justify-self: center;
     display: flex;
     flex-direction: column;
     gap: 4px;
     font-size: 24px;
     font-weight: 300;
+    text-align: center;
+}
+
+.menu-burger {
+    display: flex;
+    justify-content: end;
+    width: 24px;
+    height: 24px;
+    border-left: 1px solid var(--color-text-white-50);
+    padding-left: 5px;
+    padding-right: 10px;
 }
 
 .nav-links{
@@ -123,3 +145,4 @@ section p{
 #labs {
     height: 240px;
 }
+
