@@ -18,6 +18,7 @@ body {
   line-height: 1.5;
   padding: 0rem;
 }
+
 img { max-width: 100%; height: auto; display: block; }
 
 .nav-button a{
@@ -39,19 +40,12 @@ img { max-width: 100%; height: auto; display: block; }
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 2.5rem;
+    align-items: center;
+    padding: 1.5rem;
     font-size: 28px;
 }
 .nav-dropdown {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    inline-size: var(--nav-pill-w);
-    justify-content: center;
-    align-items: center;
-    padding: 20px;    
-    border:1px solid var(--color-text-white);
-    border-radius: 40px;
-    gap: 1rem;
+    display:none;
 }
 .nav-display {
     all: unset;
@@ -67,7 +61,25 @@ nav {
     block-size: 80px;
     padding-block: 0;
     cursor: pointer;
-    padding-left: 35px;
+    padding-left: 45px;
+    white-space: nowrap;
+}
+.nav-display[aria-expanded="true"] + .nav-dropdown {
+    align-self: flex-start;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    inline-size: var(--nav-pill-w);
+    justify-content: center;
+    align-items: center;
+    padding: 25px;    
+    border:1px solid var(--color-text-white);
+    border-radius: 40px;
+    gap: 1rem;
+    padding-left: 45px;
+}
+.nav-display[aria-expanded="true"]{
+    display: none;
 }
 
 .nav-display:hover, .nav-display:focus-visible {
@@ -91,7 +103,7 @@ nav {
     width: 24px;
     height: 24px;
     border-left: 1px solid var(--color-text-white-50);
-    padding-left: 18px;
+    padding-left: 23px;
     padding-right: 10px;
 }
 
@@ -100,6 +112,7 @@ nav {
     padding-right: 3rem;
     gap: 30px;
     font-weight: 400;
+    margin-left: auto;
 }
 
 .name{
