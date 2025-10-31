@@ -21,14 +21,21 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-button a{
     text-decoration: none;
     color: inherit;
-    font-family: var(--font-primary);
-    
+    font-family: var(--font-primary);  
 }
 
 .nav-button a:hover { 
     color: var(--color-text-red);
     font-weight: 600;
 }
+
+.nav-button a.nav-current{
+    color: var(--color-text-red);
+    font-weight: 600;
+}
+
+
+
 nav {
     display: flex;
     justify-content: space-between;
