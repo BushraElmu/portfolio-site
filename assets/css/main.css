@@ -2,17 +2,19 @@
   --font-main: system-ui, sans-serif;
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Lato', sans-serif;
-  --color-bg: #0D0D0D;
+  --color-bg-dark: #0D0D0D;
   --color-text-red: #993333;
   --color-text-white: #ced9df;
 }
+
 body {
   margin: 0;
   font-family: var(--font-secondary);
-  background-color: var(--color-bg);
+  font-weight: 300;
+  background-color: var(--color-bg-dark);
   color: var(--color-text-white);
   line-height: 1.5;
-  padding: 1rem;
+  padding: 0rem;
 }
 img { max-width: 100%; height: auto; display: block; }
 
@@ -25,11 +27,12 @@ img { max-width: 100%; height: auto; display: block; }
 
 .nav-button a:hover { 
     color: var(--color-text-red);
+    font-weight: 600;
 }
 nav {
     display: flex;
     justify-content: space-between;
-    padding: 1.5rem;
+    padding: 2.5rem;
     font-size: 28px;
 }
 
@@ -43,7 +46,73 @@ nav {
 
 .nav-links{
     display: flex;
-    padding-right: 2rem;
+    padding-right: 3rem;
     gap: 30px;
     font-weight: 400;
+}
+
+.name{
+    color: var(--color-text-red);
+    font-weight: 00;
+}
+section {
+    display: grid;
+    align-items: center;
+    justify-items: flex-start;
+    padding: 3rem;
+    padding-left: 8rem;
+    padding-right: 0rem;
+    border-top: 2px dotted #7272722a;
+}
+
+section h2{
+    font-family: var(--font-primary);
+    font-weight: 500;
+    color: var(--color-text-red);
+    font-size: 20px;
+    margin: 0;
+}
+section h3{
+    font-family: var(--font-primary);
+    font-weight: 400;
+    font-size: 36px;
+    color: inherit;
+    margin: 0;
+}
+
+section p{
+    font-size: 18px;
+    align-items: center;
+}
+
+#about {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto repeat(4, 1fr);
+    height: 600px;
+}
+#about h2 {
+    grid-column: 1/-1;
+}
+
+#about h4:first-of-type{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+#about h4:last-of-type{
+    grid-column: 2;
+    grid-row: 4;
+}
+
+#experience {
+    height: 240px;
+}
+
+#flagship {
+    height: 240px;
+
+}
+
+#labs {
+    height: 240px;
 }
