@@ -1,13 +1,16 @@
 :root {
   --font-main: system-ui, sans-serif;
-  --color-bg: #111;
-  --color-text: #fff;
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Lato', sans-serif;
+  --color-bg: #0D0D0D;
+  --color-text-red: #993333;
+  --color-text-white: #ced9df;
 }
 body {
   margin: 0;
-  font-family: var(--font-main);
+  font-family: var(--font-secondary);
   background-color: var(--color-bg);
-  color: var(--color-text);
+  color: var(--color-text-white);
   line-height: 1.5;
   padding: 1rem;
 }
@@ -16,28 +19,31 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-button a{
     text-decoration: none;
     color: inherit;
+    font-family: var(--font-primary);
+    
 }
 
 .nav-button a:hover { 
-    color: red;
+    color: var(--color-text-red);
 }
 nav {
     display: flex;
     justify-content: space-between;
     padding: 1.5rem;
-    font-size: 24px;
-    font-weight: 300;
+    font-size: 28px;
 }
 
 .page-links{
     display: flex;
     flex-direction: column;
     gap: 4px;
-    font-size: 20px;
+    font-size: 24px;
+    font-weight: 300;
 }
 
 .nav-links{
     display: flex;
     padding-right: 2rem;
     gap: 30px;
+    font-weight: 400;
 }
