@@ -2,10 +2,10 @@
   --font-main: system-ui, sans-serif;
   --font-primary: 'Inter', sans-serif;
   --font-secondary: 'Lato', sans-serif;
-  --color-bg-dark: #0D0D0D;
-  --color-text-red: #993333;
-  --color-text-white: #ced9df;
-  --color-text-white-50: #ced9df80;
+  --color-dark: #0D0D0D;
+  --color-red: #993333;
+  --color-white: #ced9df;
+  --color-white-50: #ced9df80;
   --nav-pill-w: clamp(110px, 12rem, 380px);
 }
 
@@ -13,8 +13,8 @@ body {
   margin: 0;
   font-family: var(--font-secondary);
   font-weight: 300;
-  background-color: var(--color-bg-dark);
-  color: var(--color-text-white);
+  background-color: var(--color-dark);
+  color: var(--color-white);
   line-height: 1.5;
   padding: 0rem;
 }
@@ -24,7 +24,7 @@ img { max-width: 100%; height: auto; display: block; }
 header {
     position: sticky;
     top: 0;
-    background: var(--color-bg-dark);
+    background: var(--color-dark);
 }
 
 .nav-button a{
@@ -34,12 +34,12 @@ header {
 }
 
 .nav-button a:hover { 
-    color: var(--color-text-red);
+    color: var(--color-red);
     font-weight: 600;
 }
 
 .nav-button a.nav-current{
-    color: var(--color-text-red);
+    color: var(--color-red);
     font-weight: 700;
 }
 
@@ -47,7 +47,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 3rem 0rem 5rem;
+    padding: 0rem 3rem 0rem 5rem;
 }
 
 .page-display {
@@ -68,7 +68,7 @@ nav {
     justify-content: center;
     align-items: center;
     padding: 25px;    
-    border:1px solid var(--color-text-white);
+    border:1px solid var(--color-white);
     border-radius: 40px;
     gap: 1rem;
     block-size: 60px;
@@ -76,7 +76,7 @@ nav {
     cursor: pointer;
     padding-left: 45px;
     white-space: nowrap;
-    background: var(--color-bg-dark);
+    background: var(--color-dark);
     z-index: 1001;
     font-family: var(--font-primary);
 }
@@ -86,12 +86,12 @@ nav {
     grid-template-columns: 1fr auto;
     inline-size: var(--nav-pill-w);
     padding: 25px;    
-    border:1px solid var(--color-text-white);
+    border:1px solid var(--color-white);
     border-top: 0px;
     border-radius: 0 0 40px 40px;
     gap: 1rem;
     padding-left: 45px;
-    background: var(--color-bg-dark);
+    background: var(--color-dark);
     z-index: 1000;
     top: calc(100% - 1px);
     left: 0;
@@ -100,15 +100,15 @@ nav {
 .nav-display[aria-expanded="true"]{
     border-bottom: 0;
     border-radius: 40px 40px 0 0;
-    border-bottom: 0.5px solid var(--color-text-white-50);
+    border-bottom: 0.5px solid var(--color-white-50);
 }
 
 .nav-display:hover[aria-expanded="false"], .nav-display:focus-visible[aria-expanded="false"] {
-    border-color: var(--color-text-red);
+    border-color: var(--color-red);
 }
 
 .nav-display:hover[aria-expanded="true"], .nav-display:focus-visible[aria-expanded="true"] {
-    color: var(--color-text-red);
+    color: var(--color-red);
 }
 
 .page-links{
@@ -131,20 +131,36 @@ nav {
 }
 
 .menu-burger-border{
-    border-left: 1px solid var(--color-text-white-50);
+    border-left: 1px solid var(--color-white-50);
 }
 
 .nav-links{
     display: flex;
-    padding: 0 3rem 3rem 3rem;
+    padding: 3rem 21px 3rem 3rem;
     gap: 30px;
     font-weight: 400;
     margin-left: auto;
     font-size: 24px;
 }
 
+.contact-button{
+    all: unset;
+    border-radius: 40px;
+    cursor: pointer;
+    padding: 8px;
+    background: var(--color-white);
+    color: var(--color-dark);
+    font-family: var(--font-primary);
+    font-weight: 600;
+    font-size: 24px;
+}
+
+.contact-button:hover{
+    color: var(--color-red);
+}
+
 .name{
-    color: var(--color-text-red);
+    color: var(--color-red);
     font-weight: 00;
 }
 section {
@@ -160,7 +176,7 @@ section {
 section h2{
     font-family: var(--font-primary);
     font-weight: 500;
-    color: var(--color-text-red);
+    color: var(--color-red);
     font-size: 20px;
     margin: 0;
 }
