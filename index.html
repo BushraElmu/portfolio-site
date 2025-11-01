@@ -15,14 +15,14 @@
     <header>
             <nav>
                 <button class="nav-display"
-                        aria-haspopup="listbox"
-                        aria-expanded="false">
+                        aria-expanded="false"
+                        aria-controls="section-menu">
                     <span class="page-links">On This Page</span> <!--{WIP Button Title}-->
                     <span class = "menu-burger">
                         <img src="/assets/img/icons/menu-light.svg">
                     </span>
                 </button>
-                <div class="nav-dropdown">
+                <nav class="nav-dropdown" id="section-menu">
                     <div class="page-links nav-button">
                         <a href="/#about">About</a> 
                         <a href="/#experience">Experience</a>
@@ -32,7 +32,7 @@
                     <div class = "menu-burger">
                         <img src="/assets/img/icons/menu-light.svg">
                     </div>
-                </div>
+                </nav>
                 <div class="nav-links nav-button">
                     <a href="/" class="nav-current">Home</a>
                     <a href="/flagship-1/">Flagship 1</a>
