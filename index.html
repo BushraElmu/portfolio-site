@@ -13,13 +13,27 @@
 
 <body>
     <header>
-        <div class="container">
             <nav>
-                <div class="page-links nav-button">
-                    <a href="/#about">About</a> 
-                    <a href="/#experience">Experience</a>
-                    <a href="/#flagships">Flagships</a>
-                    <a href="/#labs">Labs</a>
+                <div class="page-display">
+                    <button class="nav-display"
+                            aria-expanded="false"
+                            aria-controls="section-menu">
+                        <span class="page-links">On This Page</span> <!--{WIP Button Title}-->
+                        <span class = "menu-burger menu-burger-border">
+                            <img src="/assets/img/icons/menu-light.svg">
+                        </span>
+                    </button>
+                    <nav class="nav-dropdown" id="section-menu">
+                        <div class="page-links nav-button">
+                            <a href="/#about">About</a> 
+                            <a href="/#experience">Experience</a>
+                            <a href="/#flagships">Flagships</a>
+                            <a href="/#labs">Labs</a>
+                        </div>
+                    <div class = "menu-burger">
+                        <img src="/assets/img/icons/menu-dark.svg">
+                    </div>
+                    </nav>
                 </div>
                 <div class="nav-links nav-button">
                     <a href="/" class="nav-current">Home</a>
@@ -29,7 +43,6 @@
                     <a href="/resume/">Resume</a>
                 </div>
             </nav>
-        </div>
     </header>
 
 <main>
